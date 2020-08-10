@@ -3,7 +3,6 @@ const app = express();
 const mongoose = require('mongoose');
 const ShortUrl = require('./ models/shortUrl');
 
-const dbURI = 'mongodb+srv://dhawal:ZRg0BV1Ekj4Rynj7@nodetuts.oducf.mongodb.net/node-tuts?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI,{
     useNewUrlParser:true, useUnifiedTopology:true
