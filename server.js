@@ -8,8 +8,8 @@ const dbURI = 'mongodb+srv://dhawal:ZRg0BV1Ekj4Rynj7@nodetuts.oducf.mongodb.net/
 mongoose.connect(dbURI,{
     useNewUrlParser:true, useUnifiedTopology:true
 })
-.then((result)=>{app.listen(process.env.PORT);})
-    .catch((err)=>{console.log(err)});
+// .then((result)=>{app.listen(process.env.PORT);})
+//     .catch((err)=>{console.log(err)});
 app.set('view engine','ejs');
 app.use(express.urlencoded({ extended:false}));
 app.get('/', async (req,res)=>{
@@ -31,4 +31,4 @@ app.get('/:shortUrl',async (req,res)=>{
     shortUrl.save();
     res.redirect(shortUrl.full);
 })
-// app.listen(process.env.PORT || 3000) ;
+app.listen(process.env.PORT ) ;
